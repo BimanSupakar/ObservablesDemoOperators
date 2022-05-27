@@ -1,0 +1,10 @@
+<h2>DEBOUNCE TIME + SEARCH</h2>
+
+<input class="form-control" [(ngModel)]="userQuestion" 
+type="text" name="userQuestion" id="userQuestions"
+placeholder="ENTER TEXT AND WAIT FOR 3 SEC"
+(ngModelChange)="this.userQuestionUpdate.next($event)">
+
+<ul>
+  <li *ngFor="let message of consoleMessages">{{message}}</li>
+</ul>
